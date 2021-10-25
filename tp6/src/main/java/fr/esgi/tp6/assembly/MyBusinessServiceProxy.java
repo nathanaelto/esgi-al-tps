@@ -1,24 +1,31 @@
 package fr.esgi.tp6.assembly;
 
+import fr.esgi.tp6.MyAuthenticationService;
 import fr.esgi.tp6.MyBusinessService;
-import fr.esgi.tp6.MyLogger;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MyBusinessServiceProxy extends MyBusinessService {
 
-    private final MyBusinessService myBusinessService;
-    private final MyLogger logger;
+    private static Logger logger = Logger.getLogger(MyBusinessServiceProxy.class.getName());
 
-    public MyBusinessServiceProxy(MyBusinessService myBusinessService, MyLogger logger) {
+    private final MyBusinessService myBusinessService;
+    private final MyAuthenticationService myAuthenticationService;
+
+    public MyBusinessServiceProxy(MyBusinessService myBusinessService, MyAuthenticationService myAuthenticationService) {
         this.myBusinessService = myBusinessService;
-        this.logger = logger;
+        this.myAuthenticationService = myAuthenticationService;
     }
 
     @Override
     public void doSomething() {
-        logger.log("Beginning processing.");
+        logger.log(Level.INFO, "Beginning processing.");
         long start = System.nanoTime();
-        myBusinessService.doSomething();
+        if (myAuthenticationService.authenticate()) {
+            myBusinessService.doSomething();
+        }
         long end = System.nanoTime();
-        logger.log(String.format("Ending with %d ms.", (end - start) / 1000));
+        logger.log(Level.INFO, String.format("Ending with %d ms.", (end - start) / 1000));
     }
 }

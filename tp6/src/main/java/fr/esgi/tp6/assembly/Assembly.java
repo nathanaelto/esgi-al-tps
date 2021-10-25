@@ -1,20 +1,20 @@
 package fr.esgi.tp6.assembly;
 
 import fr.esgi.tp6.MyBusinessService;
-import fr.esgi.tp6.MyLogger;
+import fr.esgi.tp6.MyAuthenticationService;
 
 import java.util.function.Function;
 
-public class Assembly implements Function<MyBusinessService, MyBusinessServiceProxy> {
+public class Assembly implements Function<MyBusinessService, MyBusinessService> {
 
-    private final MyLogger logger;
+    private final MyAuthenticationService logger;
 
-    public Assembly(MyLogger logger) {
+    public Assembly(MyAuthenticationService logger) {
         this.logger = logger;
     }
 
     @Override
-    public MyBusinessServiceProxy apply(MyBusinessService myBusinessService) {
+    public MyBusinessService apply(MyBusinessService myBusinessService) {
         return new MyBusinessServiceProxy(myBusinessService, logger);
     }
 }

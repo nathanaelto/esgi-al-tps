@@ -1,8 +1,15 @@
 package fr.esgi.tp6;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class MyBusinessService {
 
+    private static Logger logger = Logger.getLogger(MyBusinessService.class.getName());
+
     public void doSomething() {
-        System.out.println("Do something");
+        if (logger.isLoggable(Level.INFO)) {
+            logger.log(Level.INFO, "DO something");
+        }
     }
 }
