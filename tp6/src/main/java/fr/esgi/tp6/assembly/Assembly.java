@@ -1,7 +1,7 @@
 package fr.esgi.tp6.assembly;
 
-import fr.esgi.tp6.MyBusinessService;
 import fr.esgi.tp6.MyAuthenticationService;
+import fr.esgi.tp6.MyBusinessService;
 
 import java.util.function.Function;
 

@@ -6,7 +6,8 @@ import fr.esgi.tp7.domain.UserRepository;
 
 import java.util.List;
 
-public class JdbcUserServiceInfrastructure implements UserRepository {
+public class JdbcUserRepository implements UserRepository {
+
     @Override
     public void save(User user) {
         throw new UnsupportedOperationException("Not yet implemented.");
