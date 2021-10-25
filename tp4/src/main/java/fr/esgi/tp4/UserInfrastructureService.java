@@ -1,5 +1,5 @@
 package fr.esgi.tp4;
 
-interface UserServiceInfrastructure {
+interface UserInfrastructureService {
     void save(User user);
 }

@@ -4,8 +4,8 @@ final class Main {
     @SuppressWarnings("all")
     public static void main(String[] args) {
         User user = User.of("BOISSINOT", "GREGORY");
-        var jdbcUserServiceInfrastructure = new JdbcUserServiceInfrastructure();
-        var loggingUserServiceInfrastructure = new LoggingUserServiceInfrastructure(new LoggerService());
+        var jdbcUserServiceInfrastructure = new JdbcUserInfrastructureService();
+        var loggingUserServiceInfrastructure = new LoggingUserInfrastructureService(new LoggerService());
         var userServiceInfrastructure = loggingUserServiceInfrastructure;
         userServiceInfrastructure.save(user);
     }

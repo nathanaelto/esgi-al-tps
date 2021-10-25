@@ -1,10 +1,10 @@
 package fr.esgi.tp4;
 
-final class LoggingUserServiceInfrastructure implements UserServiceInfrastructure {
+final class LoggingUserInfrastructureService implements UserInfrastructureService {
 
     private final LoggerService logger;
 
-    LoggingUserServiceInfrastructure(LoggerService logger) {
+    LoggingUserInfrastructureService(LoggerService logger) {
         this.logger = logger;
     }
 
