@@ -10,21 +10,21 @@ final class User {
     private String password;
 
     private User(UserId userId, String lastname, String firtstname, String password) {
-        this.userId = userId;
-        this.lastname = lastname;
-        this.firstname = firtstname;
-        this.password = password;
+        this.userId = Objects.requireNonNull(userId);
+        this.lastname = Objects.requireNonNull(lastname);
+        this.firstname = Objects.requireNonNull(firtstname);
+        this.password = Objects.requireNonNull(password);
     }
 
-    public static User of(UserId userId, String lastname, String firstname, String password) {
+    static User of(UserId userId, String lastname, String firstname, String password) {
         return new User(userId, lastname, firstname, password);
     }
 
-    public UserId getUserId() {
+    UserId getUserId() {
         return userId;
     }
 
-    public void changePassword(String newPassword) {
+    void changePassword(String newPassword) {
         this.password = Objects.requireNonNull(newPassword);
     }
 

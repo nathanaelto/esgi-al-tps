@@ -1,6 +1,6 @@
 package fr.esgi.tp5;
 
-class JdbcUserServiceInfrastructure implements UserRepository {
+class JdbcUserRepository implements UserRepository {
     @Override
     public void save(User user) {
         throw new UnsupportedOperationException("Not yet implemented.");
