@@ -25,6 +25,6 @@ final class InMemoryUserRepository implements UserRepository {
 
     @Override
     public UserId nextId() {
-        return UserId.of(counter.incrementAndGet());
+        return UserId.of(String.valueOf(counter.incrementAndGet()));
     }
 }
