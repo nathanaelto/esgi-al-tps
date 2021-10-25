@@ -8,13 +8,11 @@ import java.util.logging.Logger;
 
 public class MyBusinessServiceProxy extends MyBusinessService {
 
-    private static Logger logger = Logger.getLogger(MyBusinessServiceProxy.class.getName());
+    private static final Logger logger = Logger.getLogger(MyBusinessServiceProxy.class.getName());
 
-    private final MyBusinessService myBusinessService;
     private final MyAuthenticationService myAuthenticationService;
 
-    public MyBusinessServiceProxy(MyBusinessService myBusinessService, MyAuthenticationService myAuthenticationService) {
-        this.myBusinessService = myBusinessService;
+    public MyBusinessServiceProxy(MyAuthenticationService myAuthenticationService) {
         this.myAuthenticationService = myAuthenticationService;
     }
 
@@ -23,7 +21,7 @@ public class MyBusinessServiceProxy extends MyBusinessService {
         logger.log(Level.INFO, "Beginning processing.");
         long start = System.nanoTime();
         if (myAuthenticationService.authenticate()) {
-            myBusinessService.doSomething();
+            super.doSomething();
         }
         long end = System.nanoTime();
         logger.log(Level.INFO, String.format("Ending with %d ms.", (end - start) / 1000));
