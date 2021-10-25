@@ -4,7 +4,7 @@ final class LoggingUserServiceInfrastructure implements UserServiceInfrastructur
 
     private final Logger logger;
 
-    public LoggingUserServiceInfrastructure(Logger logger) {
+    LoggingUserServiceInfrastructure(Logger logger) {
         this.logger = logger;
     }
 
