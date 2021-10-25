@@ -1,6 +1,6 @@
 package fr.esgi.tp3;
 
-public class OtherFoo extends Foo {
+class OtherFoo extends Foo {
 
     @Override
     public void doSomething() {

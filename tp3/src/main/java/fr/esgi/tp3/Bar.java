@@ -1,6 +1,6 @@
 package fr.esgi.tp3;
 
-public class Bar {
+final class Bar {
 
     public void bar(Foo foo) {
         foo.doSomething();
