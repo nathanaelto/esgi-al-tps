@@ -8,7 +8,7 @@ import fr.esgi.tp7.infrastructure.InMemoryUserRepository;
 
 import java.util.List;
 
-public class Main {
+public final class Main {
 
     public static void main(String[] args) {
 

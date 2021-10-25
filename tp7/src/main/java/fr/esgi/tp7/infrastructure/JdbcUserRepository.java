@@ -6,7 +6,7 @@ import fr.esgi.tp7.domain.UserRepository;
 
 import java.util.List;
 
-public class JdbcUserRepository implements UserRepository {
+public final class JdbcUserRepository implements UserRepository {
 
     @Override
     public void save(User user) {
