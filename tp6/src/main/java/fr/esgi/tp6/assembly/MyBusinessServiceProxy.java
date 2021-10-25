@@ -18,12 +18,16 @@ public class MyBusinessServiceProxy extends MyBusinessService {
 
     @Override
     public void doSomething() {
-        logger.log(Level.INFO, "Beginning processing.");
+        if (logger.isLoggable(Level.INFO)) {
+            logger.log(Level.INFO, "Beginning processing.");
+        }
         long start = System.nanoTime();
         if (myAuthenticationService.authenticate()) {
             super.doSomething();
         }
         long end = System.nanoTime();
-        logger.log(Level.INFO, String.format("Ending with %d ms.", (end - start) / 1000));
+        if (logger.isLoggable(Level.INFO)) {
+            logger.log(Level.INFO, String.format("Ending with %d ms.", (end - start) / 1000));
+        }
     }
 }
