@@ -1,6 +1,6 @@
-package r.esgi.tp4;
+package fr.esgi.tp4;
 
-class LoggingUserServiceInfrastructure implements UserServiceInfrastructure {
+final class LoggingUserServiceInfrastructure implements UserServiceInfrastructure {
 
     private final Logger logger;
 

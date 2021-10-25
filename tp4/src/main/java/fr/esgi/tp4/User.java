@@ -1,6 +1,6 @@
-package r.esgi.tp4;
+package fr.esgi.tp4;
 
-public final class User {
+final class User {
 
     private final String lastname;
     private final String firstname;

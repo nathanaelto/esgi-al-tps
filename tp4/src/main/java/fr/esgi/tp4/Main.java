@@ -1,6 +1,6 @@
-package r.esgi.tp4;
+package fr.esgi.tp4;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         User user = User.of("BOISSINOT", "GREGORY");
         //var userServiceInfrastructure = new JdbcUserServiceInfrastructure();
