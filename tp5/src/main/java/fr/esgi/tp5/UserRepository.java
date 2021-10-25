@@ -1,4 +1,4 @@
-package r.esgi.tp5;
+package fr.esgi.tp5;
 
 interface UserRepository {
     void save(User user);

@@ -1,4 +1,4 @@
-package r.esgi.tp5;
+package fr.esgi.tp5;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
