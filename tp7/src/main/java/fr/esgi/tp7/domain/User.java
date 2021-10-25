@@ -9,10 +9,10 @@ public final class User {
     private final String firstname;
     private String password;
 
-    private User(UserId userId, String lastname, String firtstname, String password) {
+    private User(UserId userId, String lastname, String firstname, String password) {
         this.userId = userId;
         this.lastname = lastname;
-        this.firstname = firtstname;
+        this.firstname = firstname;
         this.password = password;
     }
 
