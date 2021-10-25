@@ -14,14 +14,6 @@ final class User {
         return new User(lastname, firstname);
     }
 
-    public String getLastname() {
-        return lastname;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
     @Override
     public String toString() {
         return "User{" +

@@ -24,14 +24,6 @@ public final class User {
         return userId;
     }
 
-    public String getLastname() {
-        return lastname;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
     public void changePassword(String newPassword) {
         this.password = Objects.requireNonNull(newPassword);
     }
