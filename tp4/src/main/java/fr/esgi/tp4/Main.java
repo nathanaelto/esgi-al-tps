@@ -6,7 +6,7 @@ final class Main {
         User user = User.of("BOISSINOT", "GREGORY");
         var jdbcUserServiceInfrastructure = new JdbcUserServiceInfrastructure();
         var loggingUserServiceInfrastructure = new LoggingUserServiceInfrastructure(new LoggerService());
-        var userServiceInfrastructure = jdbcUserServiceInfrastructure;
+        var userServiceInfrastructure = loggingUserServiceInfrastructure;
         userServiceInfrastructure.save(user);
     }
 }
