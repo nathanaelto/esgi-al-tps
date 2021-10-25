@@ -11,7 +11,7 @@ final class InMemoryUserRepository implements UserRepository {
 
     @Override
     public void save(User user) {
-        data.putIfAbsent(user.getUserId(), user);
+        data.put(user.getUserId(), user);
     }
 
     @Override
