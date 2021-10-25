@@ -2,12 +2,15 @@ package fr.esgi.tp5;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.ReentrantLock;
 
 final class InMemoryUserRepository implements UserRepository {
 
-    private final AtomicInteger counter = new AtomicInteger(0);
+    //private final AtomicInteger counter = new AtomicInteger(0);
+    private int counter = 0;
     private final Map<UserId, User> data = new ConcurrentHashMap<>();
+
+    private final ReentrantLock lock = new ReentrantLock();
 
     @Override
     public void save(User user) {
@@ -25,6 +28,12 @@ final class InMemoryUserRepository implements UserRepository {
 
     @Override
     public UserId nextId() {
-        return UserId.of(String.valueOf(counter.incrementAndGet()));
+        lock.tryLock();
+        try {
+            ++counter;
+            return UserId.of(String.valueOf(counter));
+        } finally {
+            lock.unlock();
+        }
     }
 }
