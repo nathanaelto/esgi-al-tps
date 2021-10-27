@@ -10,6 +10,6 @@ public class MainTestRefexion {
         final Constructor<LoggerFactory> declaredConstructor = loggerFactoryClass.getDeclaredConstructor();
         declaredConstructor.setAccessible(true);
         final LoggerFactory loggerFactory = declaredConstructor.newInstance();
-        System.out.println(loggerFactory!=null);
+        System.out.println(loggerFactory != null);
     }
 }

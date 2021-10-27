@@ -9,6 +9,9 @@ public class ValidationAddressEngine implements Predicate<Address> {
 
     private static final ValidationAddressEngine INSTANCE = new ValidationAddressEngine();
 
+    private ValidationAddressEngine() {
+    }
+
     public static ValidationAddressEngine getInstance() {
         return INSTANCE;
     }

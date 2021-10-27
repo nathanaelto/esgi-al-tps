@@ -1,15 +1,16 @@
-package fr.esgi.tp11.dao;
+package fr.esgi.tp11.withdao;
 
 import fr.esgi.tp11.Address;
 import fr.esgi.tp11.User;
 
 public class MainDAO {
     public static void main(String[] args) {
-        UserDao userDao = new MySQLUserDAO();
 
         AddressDAO addressDAO = new MySQLAddressDAO();
-        Address address = new Address("ALFORTVILLE");
+        Address address = new Address(1, "ALFORTVILLE");
         addressDAO.createAddress(address);
+
+        UserDao userDao = new MySQLUserDAO();
 
         //Create user
         User user1 = new User(1, "BOISSINOT", "GREGORY", address, "CHANGEME");
@@ -21,5 +22,8 @@ public class MainDAO {
 
         //Delete user
         userDao.deleteUser(user1.getId());
+
+        //Delete address
+        addressDAO.deleteAddress(address.getId());
     }
 }

@@ -7,7 +7,7 @@ interface UserRepository {
 
     User byId(UserId userId);
 
-    default UserId nextId(){
+    default UserId nextId() {
         return UserId.fromUUID(UUID.randomUUID());
     }
 }

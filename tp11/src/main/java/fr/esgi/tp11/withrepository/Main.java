@@ -1,4 +1,4 @@
-package fr.esgi.tp11.repository;
+package fr.esgi.tp11.withrepository;
 
 import fr.esgi.tp11.Address;
 import fr.esgi.tp11.User;
@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         //Create user
-        Address address = new Address("ALFORTVILLE");
+        Address address = new Address(1, "ALFORTVILLE");
 
         ValidationAddressEngine.getInstance().test(address);
 
@@ -18,13 +18,17 @@ public class Main {
 
         //Save my user
         users.add(user1);
+        users.add(user1);
+        users.add(user1);
+        users.add(user1);
+        users.add(user1);
 
         //Modify Password
         user1.changePassword("CHANGEPASSWORD");
         users.add(user1);
 
         //Modify address
-        user1.changeAddress(new Address("PARIS"));
+        user1.changeAddress(new Address(1, "PARIS"));
         users.add(user1);
 
     }
