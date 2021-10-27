@@ -1,7 +1,7 @@
 package fr.esgi.tp3;
 
- class Foo {
+class Foo {
      void doSomething() {
-        System.out.println("FOO");
+        System.out.println("Regular Behavior");
     }
 }
