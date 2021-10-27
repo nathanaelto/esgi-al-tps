@@ -19,7 +19,7 @@ public final class JdbcUserRepository implements UserRepository {
     }
 
     @Override
-    public UserId nextId() {
+    public UserId nextIdentity() {
         throw new UnsupportedOperationException("Not yet implemented.");
     }
 

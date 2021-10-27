@@ -30,7 +30,7 @@ public final class InMemoryUserRepository implements UserRepository {
     }
 
     @Override
-    public UserId nextId() {
+    public UserId nextIdentity() {
         return UserId.of(counter.incrementAndGet());
     }
 

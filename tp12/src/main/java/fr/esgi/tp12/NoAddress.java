@@ -5,4 +5,9 @@ public class NoAddress implements Address {
     public String city() {
         throw new UnsupportedOperationException();
     }
+
+    @Override
+    public String country() {
+        throw new UnsupportedOperationException();
+    }
 }

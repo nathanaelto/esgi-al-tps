@@ -15,7 +15,7 @@ public final class Main {
         UserRepository userRepository = new InMemoryUserRepository();
         UserService userService = new UserService(userRepository);
 
-        final UserId myUserId = userRepository.nextId();
+        final UserId myUserId = userRepository.nextIdentity();
 
         createUser(userService, myUserId);
         changePassword(userService, myUserId);

@@ -7,7 +7,7 @@ public interface UserRepository {
 
     User byId(UserId userId);
 
-    UserId nextId();
+    UserId nextIdentity();
 
     List<User> findAll();
 }
