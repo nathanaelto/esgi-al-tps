@@ -10,10 +10,6 @@ public class Meetup {
         this.scheduledAtHour = scheduledAtHour;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public int getScheduledAtHour() {
         return scheduledAtHour;
     }
