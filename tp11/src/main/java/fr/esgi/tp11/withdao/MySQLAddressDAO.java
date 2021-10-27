@@ -5,6 +5,11 @@ import fr.esgi.tp11.Address;
 public class MySQLAddressDAO implements AddressDAO {
 
     @Override
+    public Address findById(int addressId) {
+        return null;
+    }
+
+    @Override
     public void createAddress(Address address) {
         //Do nothing
     }

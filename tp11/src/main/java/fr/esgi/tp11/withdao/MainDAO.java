@@ -7,13 +7,14 @@ public class MainDAO {
     public static void main(String[] args) {
 
         AddressDAO addressDAO = new MySQLAddressDAO();
-        Address address = new Address(1, "ALFORTVILLE");
+        Address address = Address.of(1, "ALFORTVILLE");
         addressDAO.createAddress(address);
 
         UserDao userDao = new MySQLUserDAO();
 
         //Create user
         User user1 = new User(1, "BOISSINOT", "GREGORY", address, "CHANGEME");
+        userDao.createUser(user1);
         userDao.createUser(user1);
 
         //Modify user

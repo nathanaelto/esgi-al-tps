@@ -8,9 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         //Create user
-        Address address = new Address(1, "ALFORTVILLE");
-
-        ValidationAddressEngine.getInstance().test(address);
+        Address address = Address.of(1, "ALFORTVILLE");
 
         User user1 = new User(1, "BOISSINOT", "GREGORY", address, "CHANGEME");
 
@@ -28,7 +26,7 @@ public class Main {
         users.add(user1);
 
         //Modify address
-        user1.changeAddress(new Address(1, "PARIS"));
+        user1.changeAddress(Address.of(1, "PARIS"));
         users.add(user1);
 
     }
