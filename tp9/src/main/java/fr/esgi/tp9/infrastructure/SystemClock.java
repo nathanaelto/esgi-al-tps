@@ -1,4 +1,6 @@
-package fr.esgi.tp9.domain;
+package fr.esgi.tp9.infrastructure;
+
+import fr.esgi.tp9.domain.Clock;
 
 import java.time.ZonedDateTime;
 
