@@ -16,6 +16,7 @@ final class MeetupRepositoryTest {
     private final static int TEST_MEETUP_HOUR = 11;
 
     private final Clock stubClock = () -> ZonedDateTime.of(2021, 10, 27, TEST_MEETUP_HOUR, 30, 50, 0, ZoneId.systemDefault());
+
     private final Map<Integer, List<Meetup>> testData =
             Collections.singletonMap(TEST_MEETUP_HOUR, List.of(new Meetup(1, TEST_MEETUP_HOUR),
                     new Meetup(2, TEST_MEETUP_HOUR)));
