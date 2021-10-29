@@ -1,4 +1,4 @@
-package fr.esgi.tp12;
+package fr.esgi.tp15;
 
 final class Main {
     public static void main(String[] args) {

@@ -2,6 +2,7 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -11,12 +12,6 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>tp13-parent</artifactId>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>tp13.1</module>
-        <module>tp13.2</module>
-    </modules>
+    <artifactId>tp15</artifactId>
 
 </project>
