@@ -1,24 +1,24 @@
 package fr.esgi.tp12;
 
-public class Main {
+final class Main {
     public static void main(String[] args) {
 
         final AddressBuilder addressBuilder =
-                new AddressBuilder()
-                        .withCountry("FRANCE");
+                AddressBuilder.create().withCountry("FRANCE");
+
         Address address1 = addressBuilder
                 .withCity("ALFORTVILLE")
                 .withCountry("FRANCE")
                 .build();
 
         Address address2 = addressBuilder
-                .withCity("SHANGAI")
+                .withCity("SHANGHAI")
                 .withCountry("CHINE")
                 .build();
 
-        User user = User.create("GREGORY", address1);
+        User user = User.create("GREGORY", address2);
         if (!(address1 instanceof NoAddress)) {
-            System.out.println(address1.city());
+            System.out.println(user.getAddress().city());
         }
     }
 }

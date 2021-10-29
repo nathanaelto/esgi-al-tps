@@ -2,10 +2,13 @@ package fr.esgi.tp12;
 
 import java.util.Objects;
 
-public class AddressBuilder {
+final class AddressBuilder {
 
     private String city;
     private String country;
+
+    private AddressBuilder() {
+    }
 
     public static AddressBuilder create() {
         return new AddressBuilder();
@@ -13,15 +16,15 @@ public class AddressBuilder {
 
     public AddressBuilder withCity(String city) {
         AddressBuilder builder = new AddressBuilder();
-        this.city = Objects.requireNonNull(city);
-        this.country = country;
+        builder.city = Objects.requireNonNull(city);
+        builder.country = country;
         return builder;
     }
 
     public AddressBuilder withCountry(String country) {
         AddressBuilder builder = new AddressBuilder();
-        this.city = city;
-        this.country = Objects.requireNonNull(country);
+        builder.city = city;
+        builder.country = Objects.requireNonNull(country);
         return builder;
     }
 

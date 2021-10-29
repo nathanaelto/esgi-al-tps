@@ -1,6 +1,6 @@
 package fr.esgi.tp12;
 
-public class User {
+final class User {
     private final String firstname;
     private Address address;
 

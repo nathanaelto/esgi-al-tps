@@ -1,6 +1,6 @@
 package fr.esgi.tp12;
 
-public interface Address {
+ interface Address {
     String city();
 
     String country();
