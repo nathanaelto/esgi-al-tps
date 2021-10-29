@@ -2,28 +2,27 @@ package fr.esgi.tp13;
 
 import java.util.Objects;
 
-final class Player {
+public class Player {
 
     private Position position;
 
-    Player(Position initialPosition) {
+    public Player(Position initialPosition) {
         this.position = initialPosition;
     }
 
     //Simple moveLeft method
-    void moveLeft(int steps) {
+    public void moveLeft(int steps) {
         this.position = this.position.toTheLeft(steps);
     }
 
     //Other moveLeft method with return Position
-    Position moveLeftWithImmutabilityMode(int steps) {
+    public Position moveLeftWithImmutabilityMode(int steps) {
         this.position = this.position.toTheLeft(steps);
         return this.position;
     }
 
-
     //Need for test
-    Position currentPosition() {
+    public Position currentPosition() {
         return position;
     }
 

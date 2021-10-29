@@ -14,7 +14,7 @@ class PositionTest {
         //Equality with object content without getters on Position object
         assertEquals(new Position(6, 20), nextPosition);
 
-        //Test that the previous position is not modified
+        //Test that the initial position is not modified
         assertEquals(new Position(10, 20), position);
     }
 
