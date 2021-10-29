@@ -14,7 +14,7 @@ final class TestPackage {
     void changeState() {
 
         final LocalDateTime expectedLocalDateTime = LocalDateTime.of(2021, 11, 1, 12, 34);
-        Package aPackage = new Package(1, expectedLocalDateTime, State.of("PREPARED"));
+        Package aPackage = new Package(PackageId.of(1), expectedLocalDateTime, State.of("PREPARED"));
 
         aPackage.changeState(State.of("SENT"));
         aPackage.changeState(State.of("IN_TRANSIT"));
@@ -22,7 +22,7 @@ final class TestPackage {
         aPackage.changeState(State.of("ARRIVED_INTO_B"));
         aPackage.changeState(State.of("DELIVERED"));
 
-        assertEquals(1, aPackage.getId());
+        assertEquals(1, aPackage.getId().value());
         assertEquals(expectedLocalDateTime, aPackage.getCreationDate());
         assertEquals(
                 Stream.of("PREPARED", "SENT", "IN_TRANSIT", "ARRIVED_INTO_A", "ARRIVED_INTO_B", "DELIVERED")

@@ -4,11 +4,11 @@ import java.time.LocalDateTime;
 
 final class Package {
 
-    private final int id;
+    private final PackageId id;
     private final LocalDateTime creationDate;
     private RawFileHistory history;
 
-    Package(int id, LocalDateTime creationDate, State initialState) {
+    Package(PackageId id, LocalDateTime creationDate, State initialState) {
         assert creationDate != null;
         assert initialState != null;
         this.id = id;
@@ -25,7 +25,7 @@ final class Package {
         return history;
     }
 
-    public int getId() {
+    public PackageId getId() {
         return id;
     }
 
