@@ -8,7 +8,7 @@ final class Player {
 
     private Position position;
 
-    private List<Event> recordedEvents;
+    private final List<Event> recordedEvents;
 
     public Player(Position initialPosition) {
         this.position = initialPosition;

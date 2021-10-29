@@ -7,11 +7,20 @@
 
     <parent>
         <groupId>fr.esgi.al</groupId>
-        <artifactId>al-tps-parent</artifactId>
+        <artifactId>tp14-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>tp11</artifactId>
+    <artifactId>tp14.3</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>
