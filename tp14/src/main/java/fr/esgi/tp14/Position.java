@@ -1,8 +1,9 @@
-package fr.esgi.tp13;
+package fr.esgi.tp14;
 
 import java.util.Objects;
 
 final class Position {
+
     private final int x;
     private final int y;
 

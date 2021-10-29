@@ -1,29 +1,29 @@
-package fr.esgi.tp13;
+package fr.esgi.tp14;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-public class Player {
+final class Player {
 
     private Position position;
 
+    private List<Event> recordedEvents;
+
     public Player(Position initialPosition) {
         this.position = initialPosition;
+        this.recordedEvents = new ArrayList<>();
     }
 
     //Simple moveLeft method
     public void moveLeft(int steps) {
-        this.position = this.position.toTheLeft(steps);
+        var nextPosition = this.position.toTheLeft(steps);
+        this.position = nextPosition;
+        this.recordedEvents.add(new PlayerMoved(nextPosition));
     }
 
-    //Other moveLeft method with return Position
-    public Position moveLeftWithImmutabilityMode(int steps) {
-        this.position = this.position.toTheLeft(steps);
-        return this.position;
-    }
-
-    //Need for test
-    public Position currentPosition() {
-        return position;
+    public List<Event> recordedEvents() {
+        return recordedEvents;
     }
 
     @Override
