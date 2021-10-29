@@ -1,4 +1,4 @@
-package fr.esgi.tp13;
+package fr.esgi.tp14;
 
 import org.junit.jupiter.api.Test;
 
@@ -30,7 +30,7 @@ class PlayerTest {
         var currentPosition = player.moveLeftWithImmutabilityMode(4);
         //Can use the returned position object for equality
         assertEquals(new Position(6, 20), currentPosition);
-        //Need to add a test the player itself
+        //Always need to add a test the player itself
         assertEquals(new Player(new Position(6, 20)), player);
     }
 }

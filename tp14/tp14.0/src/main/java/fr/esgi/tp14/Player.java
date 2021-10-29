@@ -1,4 +1,4 @@
-package fr.esgi.tp13;
+package fr.esgi.tp14;
 
 import java.util.Objects;
 
@@ -20,7 +20,6 @@ final class Player {
         this.position = this.position.toTheLeft(steps);
         return this.position;
     }
-
 
     //Need for test
     Position currentPosition() {
