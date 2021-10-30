@@ -2,7 +2,7 @@ package fr.esgi.tp14;
 
 import java.util.Objects;
 
-public class PlayerTookInitialPosition implements Event{
+public class PlayerTookInitialPosition implements Event {
 
     private final int x;
     private final int y;

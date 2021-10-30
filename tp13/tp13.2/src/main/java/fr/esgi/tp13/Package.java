@@ -16,7 +16,7 @@ final class Package {
         this.history = RawFileHistory.create().append(initialState);
     }
 
-     void changeState(State state) {
+    void changeState(State state) {
         assert state != null;
         this.history = history.append(state);
     }
