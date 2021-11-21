@@ -7,7 +7,7 @@ final class WindowedPeriod {
     private final int startHour;
     private final int endHour;
 
-    WindowedPeriod(int startHour, int endHour) {
+    public WindowedPeriod(int startHour, int endHour) {
         checkPreconditions(startHour, endHour);
         this.startHour = startHour;
         this.endHour = endHour;

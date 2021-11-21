@@ -8,12 +8,12 @@ final class TimeSlot {
     private final LocalDate date;
     private final WindowedPeriod windowedPeriod;
 
-    TimeSlot(LocalDate date, int startHour, int endHour) {
+    public TimeSlot(LocalDate date, int startHour, int endHour) {
         this.date = date;
         this.windowedPeriod = new WindowedPeriod(startHour, endHour);
     }
 
-    WindowedPeriod windowedPeriod() {
+    public WindowedPeriod windowedPeriod() {
         return windowedPeriod;
     }
 
