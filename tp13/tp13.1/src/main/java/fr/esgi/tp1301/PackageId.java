@@ -3,6 +3,7 @@ package fr.esgi.tp1301;
 import java.util.Objects;
 
 final class PackageId {
+
     private final int id;
 
     private PackageId(int id) {
