@@ -4,22 +4,24 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-final class RawFileHistory {
+final class StateHistory {
 
     private final List<State> history;
 
-    private RawFileHistory(List<State> history) {
+    private StateHistory(List<State> history) {
         this.history = history;
     }
 
-    public static RawFileHistory create() {
-        return new RawFileHistory(new ArrayList<>());
+    public static StateHistory create(State state) {
+        final ArrayList<State> history = new ArrayList<>();
+        history.add(state);
+        return new StateHistory(history);
     }
 
-    public RawFileHistory append(State state) {
+    public StateHistory append(State state) {
         List<State> newSates = new ArrayList<>(history);
         newSates.add(state);
-        return new RawFileHistory(newSates);
+        return new StateHistory(newSates);
     }
 
     public List<State> getStates() {

@@ -7,7 +7,7 @@ final class Package {
 
     private final PackageId id;
     private final LocalDateTime creationDate;
-    private RawFileHistory history;
+    private StateHistory history;
 
     public Package(PackageId id, LocalDateTime creationDate, State initialState) {
         Objects.requireNonNull(id);
@@ -15,15 +15,15 @@ final class Package {
         Objects.requireNonNull(initialState);
         this.id = id;
         this.creationDate = creationDate;
-        this.history = RawFileHistory.create().append(initialState);
+        this.history = StateHistory.create(initialState);
     }
 
-    void changeState(State state) {
-        assert state != null;
+    public void changeState(State state) {
+        Objects.requireNonNull(state);
         this.history = history.append(state);
     }
 
-    public RawFileHistory getHistory() {
+    public StateHistory getHistory() {
         return history;
     }
 
