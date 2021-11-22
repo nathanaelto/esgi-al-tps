@@ -34,6 +34,7 @@
         <module>tp14</module>
         <module>tp15</module>
         <module>tp16</module>
+        <module>tpCours</module>
     </modules>
 
 </project>
