@@ -5,19 +5,19 @@ import java.util.List;
 
 final class Player {
 
-    private final List<Event> recordedEvents;
+    private final List<Event> events;
 
     public Player(int x, int y) {
-        this.recordedEvents = new ArrayList<>();
-        this.recordedEvents.add(new PlayerTookInitialPosition(x, y));
+        this.events = new ArrayList<>();
+        this.events.add(new PlayerTookInitialPosition(x, y));
     }
 
     //Simple moveLeft method
     public void moveLeft(int steps) {
-        this.recordedEvents.add(new PlayerLeftMoved(steps));
+        this.events.add(new PlayerLeftMoved(steps));
     }
 
     public List<Event> recordedEvents() {
-        return recordedEvents;
+        return events;
     }
 }
