@@ -6,24 +6,24 @@ import java.util.Objects;
 
 final class Player {
 
-    private final List<Event> recordedEvents;
+    private final List<Event> events;
     private Position position;
 
     public Player(Position initialPosition) {
         this.position = initialPosition;
-        this.recordedEvents = new ArrayList<>();
-        this.recordedEvents.add(new PlayerTookInitialPosition(initialPosition));
+        this.events = new ArrayList<>();
+        this.events.add(new PlayerTookInitialPosition(initialPosition));
     }
 
     //Simple moveLeft method
     public void moveLeft(int steps) {
         var nextPosition = this.position.toTheLeft(steps);
         this.position = nextPosition;
-        this.recordedEvents.add(new PlayerMoved(nextPosition));
+        this.events.add(new PlayerMoved(nextPosition));
     }
 
     public List<Event> recordedEvents() {
-        return recordedEvents;
+        return events;
     }
 
     @Override
