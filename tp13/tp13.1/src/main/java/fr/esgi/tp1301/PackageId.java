@@ -4,17 +4,25 @@ import java.util.Objects;
 
 final class PackageId {
 
-    private final int id;
+    private final String id;
 
-    private PackageId(int id) {
+    private PackageId(String id) {
         this.id = id;
     }
 
-    public static PackageId of(int id) {
+//    public static PackageId of(int id) {
+//        return new PackageId(String.valueOf(id));
+//    }
+//
+//    public static PackageId of(long id) {
+//        return new PackageId(String.valueOf(id));
+//    }
+
+    public static PackageId of(String id) {
         return new PackageId(id);
     }
 
-    public int value() {
+    public String value() {
         return id;
     }
 

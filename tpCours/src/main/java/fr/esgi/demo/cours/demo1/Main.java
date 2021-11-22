@@ -14,10 +14,10 @@ public class Main {
         map.put(userId1, user1);
 
         final UserId searchUserId = UserId.of("1");
-        final User user = map.get(searchUserId);
 
         System.out.println(userId1 == searchUserId);
         System.out.println("Equals:" + userId1.equals(searchUserId));
+        final User user = map.get(searchUserId);
         System.out.println(user);
     }
 }

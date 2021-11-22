@@ -15,7 +15,6 @@ final class Player {
         this.events.add(new PlayerTookInitialPosition(initialPosition));
     }
 
-    //Simple moveLeft method
     public void moveLeft(int steps) {
         var nextPosition = this.position.toTheLeft(steps);
         this.position = nextPosition;

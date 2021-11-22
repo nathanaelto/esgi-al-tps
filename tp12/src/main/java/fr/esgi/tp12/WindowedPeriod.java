@@ -14,7 +14,7 @@ final class WindowedPeriod {
     }
 
     private void checkPreconditions(int startHour, int endHour) {
-        if (endHour >= startHour) {
+        if (startHour >= endHour) {
             throw new IllegalArgumentException("start hour must be before end hour.");
         }
     }
