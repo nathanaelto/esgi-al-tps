@@ -30,7 +30,7 @@ public class UserId {
         return Objects.hash(value);
     }
 
-//    @Override
+    //    @Override
 //    public int hashCode() {
 //        return 5;
 //    }
@@ -40,6 +40,8 @@ public class UserId {
 //        if (!(obj instanceof UserId)) {
 //            return false;
 //        }
-//        return ((UserId) obj).value.equals(value);
+//
+//        final UserId userId = (UserId) obj;
+//        return userId.value.equals(value);
 //    }
 }

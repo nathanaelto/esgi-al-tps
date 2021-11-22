@@ -3,6 +3,7 @@ package fr.esgi.tp1302;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 final class StateHistory {
 
@@ -13,9 +14,7 @@ final class StateHistory {
     }
 
     public static StateHistory create(State state) {
-        final ArrayList<State> history = new ArrayList<>();
-        history.add(state);
-        return new StateHistory(history);
+        return new StateHistory(List.of(state));
     }
 
     public StateHistory append(State state) {
