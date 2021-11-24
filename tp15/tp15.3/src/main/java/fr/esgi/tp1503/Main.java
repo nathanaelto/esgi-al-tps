@@ -6,7 +6,7 @@ public class Main {
         QueryBuilder queryBuilder = new QueryBuilder().where("ID=1");
 
         var queryBuilder1 = queryBuilder
-                .select("select *")
+                .select("select ID")
                 .from("T_USER");
 
 
