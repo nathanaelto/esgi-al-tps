@@ -1,28 +1,31 @@
-package fr.esgi.tp1403;
+package fr.esgi.tp1405.domain;
 
 import java.util.Objects;
 
-//Not necessary
-final class Position {
+final class PlayerTookInitialPosition implements PlayerEvent {
 
     private final int x;
     private final int y;
 
-    public Position(int x, int y) {
+    public PlayerTookInitialPosition(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public Position toTheLeft(int steps) {
-        return new Position(x - steps, y);
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Position position = (Position) o;
-        return x == position.x && y == position.y;
+        PlayerTookInitialPosition that = (PlayerTookInitialPosition) o;
+        return x == that.x && y == that.y;
     }
 
     @Override

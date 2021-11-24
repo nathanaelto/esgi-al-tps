@@ -1,9 +1,8 @@
-package fr.esgi.tp1403;
+package fr.esgi.tp1405.domain;
 
 import java.util.Objects;
 
-//Not necessary
-final class Position {
+public final class Position {
 
     private final int x;
     private final int y;
@@ -13,8 +12,20 @@ final class Position {
         this.y = y;
     }
 
+    public static Position initial() {
+        return new Position(0, 0);
+    }
+
     public Position toTheLeft(int steps) {
         return new Position(x - steps, y);
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 
     @Override
@@ -28,5 +39,13 @@ final class Position {
     @Override
     public int hashCode() {
         return Objects.hash(x, y);
+    }
+
+    @Override
+    public String toString() {
+        return "Position{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 }
